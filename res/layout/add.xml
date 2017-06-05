@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:stretchColumns="1" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#8222"
+            android:gravity="center_vertical"
+            android:text="@string/add_tv_header"
+            android:textSize="22sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_name"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/add_et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/add_et_name_hint"
+                android:textSize="20sp" /> <!-- android:digits="@string/allowing_chars" -->
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#8222"
+            android:gravity="center_vertical"
+            android:text="@string/add_tv_description"
+            android:textSize="22sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_type"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/add_sp_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <!-- 根据用户对Spinner的选择，来加载子布局中的视图 -->
+
+
+        <!-- 1. 三种类型都有的描述“Topic” -->
+
+        <TableRow
+            android:id="@+id/add_row_topic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_topic"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp" >
+
+                <Button
+                    android:id="@+id/add_ib_capture"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="7dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/add_capture" />
+
+                <EditText
+                    android:id="@+id/add_et_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/add_ib_capture"
+                    android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV"
+                    android:gravity="center"
+                    android:hint="@string/add_et_topic_hint"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </TableRow>
+
+        <!-- 2. 第二种类型“range/slider”特有的描述“minimum value”、“maximum value”、“step” -->
+
+        <TableRow
+            android:id="@+id/add_row_min_value"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_min_value"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/add_et_min_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/add_et_min_value_hint"
+                android:inputType="numberDecimal"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/add_row_max_value"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_max_value"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/add_et_max_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/add_et_max_value_hint"
+                android:inputType="numberDecimal"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/add_row_step"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_step"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/add_et_step"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/add_et_step_hint"
+                android:inputType="numberDecimal"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <!-- 3. 第三种类型“read only value”特有的描述“unit”、“JSON key(optional)” -->
+
+        <TableRow
+            android:id="@+id/add_row_unit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_tv_unit"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/add_et_unit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/add_et_unit_hint"
+                android:textSize="20sp" /> <!-- android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV" -->
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

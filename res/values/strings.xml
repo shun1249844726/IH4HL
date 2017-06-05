@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">乐芯智能</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!--  -->
+    <string name="allowing_chars">0123456789abcdefghijklmnopqrstuvwxyzZBCDEFGHIJKLMNOPQRTSTUVWXYZ@.-</string>
+
+    <!--  -->
+    <string name="et_un">请输入您的用户名</string>
+    <string name="et_pw">请输入您的密码</string>
+    <string name="et_pw_re">请再次输入您的密码</string>
+    <string name="et_pw_new">请输入您的新密码</string>
+    <string name="et_pw_new_re">请再次输入您的新密码</string>
+    <string name="et_email">请输入您的邮箱</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_create">创建账户</string>
+    <string name="btn_change">修改密码</string>
+    <string name="btn_retrieve">找回密码</string>
+    <string name="tv_create"><u>创建账户</u></string>
+    <string name="tv_change"><u>修改密码</u></string>
+    <string name="tv_retrieve"><u>找回密码</u></string>
+    <!--  -->
+    <string name="tvApSsidTitle">WIFI名称: </string>
+    <string name="app_version">v1.0.0</string>
+    <string name="tvPasswordTitle">密码: </string>
+    <string name="switchIsSsidHiddenTitle">SSID隐藏</string>
+    <string name="spinnerTaskResultCountTitle">任务数目：</string>
+    <string name="btnConfirmTitle">确认</string>
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <string name="btn_color_picker">Color Picker</string>
+    
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <string name="welcome_tv_hint">Making preparations...</string>
+    <string name="main_label">Things List</string>
+    <string name="detail_label">Thing Details</string>
+
+    <!-- Add 固定在对话框上部的视图 -->
+    <string name="add_tv_header">添加一个新设备: </string>
+    <string name="add_tv_name">\t名称: </string>
+    <string name="add_et_name_hint">名称...</string>
+    <string name="add_tv_description">Description of the thing: </string>
+    <string name="add_tv_type">\t类型: </string>
+
+    <!-- Add 1. 三种类型（“Type”）都有的描述“Topic” -->
+    <string name="add_tv_topic">\t话题: </string>
+    <string name="add_et_topic_hint">新增话题</string>
+
+    <!-- Add 2. 第二种类型“range/slider”特有的描述“minimum value”、“maximum value”、“step” -->
+    <string name="add_tv_min_value">\t最小值: </string>
+    <string name="add_et_min_value_hint">设置最小值</string>
+    <string name="add_tv_max_value">\t最大值: </string>
+    <string name="add_et_max_value_hint">设置最大值</string>
+    <string name="add_tv_step">\t步长: </string>
+    <string name="add_et_step_hint">设置步长</string>
+
+    <!-- Add 3. 第三种类型“read only value”特有的描述“unit”、“JSON key(optional)” -->
+    <string name="add_tv_unit">\tUnit: </string>
+    <string name="add_et_unit_hint">set unit (eg: meter, celcius)</string>
+    <string name="add_tv_json_key">\tJSON key: </string>
+    <string name="add_et_json_key_hint">optional</string>
+
+    <!-- Add 固定在对话框底部的按钮 -->
+    <string name="add_btn_cancel">取消</string>
+    <string name="add_btn_confirm">确定</string>
+
+</resources>
